@@ -1605,6 +1605,10 @@ figcaption {
   position: relative;
 }
 
+.button-label-secondary.is-edit {
+  top: 1px;
+}
+
 .button-circle-wrapper {
   justify-content: flex-end;
   align-items: center;
@@ -1631,6 +1635,10 @@ figcaption {
   margin-left: 3rem;
   margin-right: 4rem;
   position: relative;
+}
+
+.button-label.is-edit {
+  top: 1px;
 }
 
 .portfolio_empty {
@@ -1668,7 +1676,7 @@ figcaption {
   z-index: 200;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem 1rem;
+  padding: 2.5rem;
   display: flex;
   position: fixed;
   inset: 0%;
@@ -1688,7 +1696,8 @@ figcaption {
   aspect-ratio: 3 / 2;
   border-radius: var(--border-radius--small-medium);
   background-color: var(--text-color--text-alternate);
-  width: 100%;
+  flex: 1;
+  max-width: 80%;
   position: relative;
   overflow: hidden;
 }
@@ -1865,6 +1874,7 @@ figcaption {
 
 .heading-style-h2_services {
   color: var(--text-color--text-secondary);
+  line-height: 1.7;
 }
 
 .pop-up_close-icon {
@@ -1939,6 +1949,10 @@ figcaption {
 }
 
 @media screen and (min-width: 1440px) {
+  h2 {
+    font-size: 4rem;
+  }
+
   p {
     font-size: 1.375rem;
   }
@@ -1962,17 +1976,28 @@ figcaption {
     margin-top: -15rem;
   }
 
+  .services_item {
+    min-height: 14rem;
+  }
+
   .about_description {
     max-width: 32rem;
   }
 
   .pop-up_component {
-    max-width: 115rem;
-    max-height: 100%;
+    max-width: 80%;
+  }
+
+  .heading-style-h2_services {
+    font-size: 3rem;
   }
 }
 
 @media screen and (min-width: 1920px) {
+  h2 {
+    font-size: 5rem;
+  }
+
   .portfolio_item.letaky {
     margin-bottom: 8rem;
   }
@@ -1988,12 +2013,24 @@ figcaption {
     margin-top: -22rem;
   }
 
+  .services_item {
+    min-height: 16rem;
+  }
+
   .with-hero-text-indent {
     text-indent: 2rem;
   }
 
   .footer_arrows {
     top: -1.5rem;
+  }
+
+  .pop-up_component {
+    max-width: 100rem;
+  }
+
+  .heading-style-h2_services {
+    font-size: 4rem;
   }
 
   .portfolio_coming-soon {
@@ -2337,6 +2374,7 @@ figcaption {
   .menu_menu-component {
     justify-content: space-between;
     align-items: center;
+    display: flex;
   }
 
   .menu_nav-links {
