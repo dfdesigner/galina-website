@@ -1,3 +1,43 @@
+@font-face {
+  font-family: Whyte;
+  src: url('../fonts/Whyte-Bold.woff2') format("woff2"), url('../fonts/Whyte-Bold.woff') format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Whyte;
+  src: url('../fonts/Whyte-Light.woff2') format("woff2"), url('../fonts/Whyte-Light.woff') format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Whyte;
+  src: url('../fonts/Whyte-Medium.woff2') format("woff2"), url('../fonts/Whyte-Medium.woff') format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Whyte;
+  src: url('../fonts/Whyte-Regular.woff2') format("woff2"), url('../fonts/Whyte-Regular.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Kaftanseriftrial;
+  src: url('../fonts/KaftanSerifTrial-Regular.woff2') format("woff2"), url('../fonts/KaftanSerifTrial-Regular.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --base-color-brand--green: #348569;
   --link-color--link-primary: var(--base-color-brand--green);
@@ -1392,9 +1432,9 @@ figcaption {
 }
 
 .portfolio_item.prezentace {
-  pointer-events: none;
   justify-content: center;
   align-items: center;
+  margin-top: 10rem;
   display: flex;
 }
 
@@ -1697,7 +1737,7 @@ figcaption {
   border-radius: var(--border-radius--small-medium);
   background-color: var(--text-color--text-alternate);
   flex: 1;
-  max-width: 80%;
+  max-width: 90%;
   position: relative;
   overflow: hidden;
 }
@@ -1934,6 +1974,26 @@ figcaption {
   position: absolute;
 }
 
+.pop-up_portfolio-image-copy {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up_portfolio-image-copy.center {
+  border-radius: var(--border-radius--small);
+  width: auto;
+}
+
+.hero_background-video {
+  z-index: 5;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0%;
+}
+
 @media screen and (min-width: 1280px) {
   .portfolio_four-col-content {
     margin-top: -12rem;
@@ -2023,6 +2083,10 @@ figcaption {
 
   .footer_arrows {
     top: -1.5rem;
+  }
+
+  .pop-up_wrapper.tiskoviny {
+    display: none;
   }
 
   .pop-up_component {
@@ -2306,7 +2370,7 @@ figcaption {
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin-top: -8rem;
+    margin-top: -9rem;
   }
 
   .section_services {
@@ -2363,6 +2427,15 @@ figcaption {
 
   .portfolio_button {
     box-shadow: 0 0 .3rem #0006;
+  }
+
+  .pop-up_component {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .pop-up_portfolio-image {
+    object-fit: scale-down;
   }
 
   .closex {
@@ -2424,6 +2497,10 @@ figcaption {
 
   .menu-empty {
     margin-top: 3rem;
+  }
+
+  .hero_background-video {
+    display: none;
   }
 }
 
@@ -2891,7 +2968,7 @@ figcaption {
     margin-bottom: 0;
   }
 
-  .portfolio_item.social-media {
+  .portfolio_item.social-media, .portfolio_item.prezentace {
     margin-top: 0;
   }
 
@@ -2985,13 +3062,17 @@ figcaption {
   }
 
   .pop-up_wrapper.tiskoviny {
-    display: flex;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
   }
 
   .pop-up_component {
     aspect-ratio: auto;
     max-width: 100%;
-    height: 55svh;
+    height: 80%;
   }
 
   .pop-up_arrow-icon {
@@ -3036,6 +3117,10 @@ figcaption {
   .snake-video_mobile {
     display: block;
   }
+
+  .hero_background-video {
+    display: none;
+  }
 }
 
 #w-node-_48367100-eecd-3dff-a99d-1ef28d73b517-d1f60cb2 {
@@ -3047,11 +3132,11 @@ figcaption {
 }
 
 #w-node-_3de79516-14bf-d348-78d0-5af2325af280-d1f60cb2 {
-  grid-area: span 1 / span 3 / span 1 / span 3;
+  grid-area: span 1 / span 4 / span 1 / span 4;
 }
 
 #w-node-_38fcc23a-0783-9c01-8302-c8655f628b3c-d1f60cb2 {
-  grid-area: span 1 / span 5 / span 1 / span 5;
+  grid-area: span 1 / span 4 / span 1 / span 4;
   align-self: end;
 }
 
